@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página </title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Bienvenido a la Biblioteca</h1>
+            <nav>
+                <ul>
+                    <li><a href="#carousel">Inicio</a></li>
+                    <li><a href="#libros">Libros</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#nosotros">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="carousel" class="carousel">
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel-slide">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/A15bGsbX5qL.jpg" alt="Libro 1">
+                <img src="https://th.bing.com/th/id/OIP.f028x6FSLsScnkpeRNuiRwHaLY?rs=1&pid=ImgDetMain" alt="Libro 2">
+                <img src="https://th.bing.com/th/id/OIP.lWG6CVk0iwOj8oASM4nKjAHaLK?rs=1&pid=ImgDetMain" alt="Libro 3">
+                <img src="https://th.bing.com/th/id/R.5f7525bc9f6e24ea4d7c10511d926183?rik=qg8tFP%2bwdj%2fUMg&pid=ImgRaw&r=0" alt="Libro 4">
+            </div>
+            <button class="carousel-btn next-btn" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+    <section id="libros" class="books">
+        <h2>Libros Destacados</h2>
+        <div class="book-grid">
+            <div class="book-item"><img src="img/1.jfif" alt="Libro 1"></div>
+            <div class="book-item"><img src="img/2.jfif" alt="Libro 2"></div>
+            <div class="book-item"><img src="img/3.jfif" alt="Libro 3"></div>
+            <div class="book-item"><img src="img/4.jfif" alt="Libro 4"></div>
+            <div class="book-item"><img src="img/5.jpg" alt="Libro 5"></div>
+            <div class="book-item"><img src="img/6.jfif" alt="Libro 6"></div>
+            <div class="book-item"><img src="img/7.jpg" alt="Libro 7"></div>
+            <div class="book-item"><img src="img/8.jfif" alt="Libro 8"></div>
+            <div class="book-item"><img src="https://danielbadosa.com/wp-content/uploads/2020/05/00.-c%C3%B3mo-dise%C3%B1ar-la-portada-de-tu-libro-ejemplo-Portada-El-Abandono-1-1080x1721.jpg" alt="Libro 9"></div>
+        </div>
+    </section>
+    <section id="nosotros" class="content">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una biblioteca dedicada a promover la lectura y el conocimiento. Descubre nuestro catálogo de libros y disfruta de una experiencia única.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Biblioteca</p>
+    </footer>
+</body>
+</html>
+
