@@ -12,41 +12,41 @@ signInButton.addEventListener('click', function(){
     signUpForm.style.display="none";
 })
 
+//notificacion
+
+        // Se crea una variable para contener como objeto nuestro botón y se agrega el evento click al botón
+    
 
 
+        /////////////////////////////////////////
+        //var libros = document.getElementById("libros");
 
+      //  libros.addEventListener('click',notify(), function(){
+            
+        //})
 
+        //function notify(){
 
+           // if (!("Notificacion" in window)) {
 
+               // alert("Tu navegador no soporta notificaciones");
 
+           // }else if (Notification.permission === "granted"){
 
+               // var notification = Notification("Mi primer notificacion");
 
-let currentSlide = 0;
+            
+           // }else if(Notification.permission !== "denied"){
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-slide img');
-    const totalSlides = slides.length;
+               // Notification.requestPermission(function(permission){
+                    
+                   // if(Notification.permission === "granted"){
 
-    if (index >= totalSlides) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = totalSlides - 1;
-    } else {
-        currentSlide = index;
-    }
+                //        var notification = new Notification("Hola Mumdo");
+                //    }
 
-    const offset = -currentSlide * 100;
-    document.querySelector('.carousel-slide').style.transform = `translateX(${offset}%)`;
-}
+                
+            //  });
 
-function nextSlide() {
-    showSlide(currentSlide + 1);
-}
-
-function prevSlide() {
-    showSlide(currentSlide - 1);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    showSlide(currentSlide);
-});
+        //} 
+    //}    

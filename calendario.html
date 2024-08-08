@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="firebaseauth.js"></script>
+    <script defer src="script.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Bienvenido a la Biblioteca</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a id="libros" href="libros.html">Libros</a></li>
+                    <li><a href="bot.html">Bots Telegram</a></li>
+                    <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="login.html">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script type="text/javascript">
+        var libros = document.getElementById("libros");
+
+        libros.addEventListener('click', function(){
+            notify();
+        })
+
+        function notify(){
+
+            if (!("Notificacion" in window)) {
+
+                alert("Tu navegador no soporta notificaciones");
+
+            }else if (Notification.permission === "granted"){
+
+                var notification = Notification("Holaaaa amigo :)");
+
+            
+            }else if(Notification.permission !== "denied"){
+
+                Notification.requestPermission(function(permission){
+                    
+                    if(Notification.permission === "granted"){
+
+                        var notification = new Notification("Se han agregado mas libros");
+                    }
+
+                
+              });
+
+        } 
+    }     
+    </script>
+    
+    <section id="libros" class="books">
+        <h2>Revisa que dias no estara disponible la biblioteca fisica</h2>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=UTC&bgcolor=%23B39DDB&src=dXRtMjAwNDAwNjlAdXRtYS5lZHUubXg&src=Y19jbGFzc3Jvb20wOTA2MDA1ZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21mODgxOTljZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb205NzBhMmY1YUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb205ZjEwN2EyMUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb201ZDE0Mzc0M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb20yOTAzZGQ1M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb201MjJkMTRjZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb20xNTg4NzIzY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb205MWU3ZTk4YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21mMmJiZjAwYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21lYTAxOTJlYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb205M2Y2MWY3ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21lMmNkYjYzZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21iNzM2MWEzOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb20xOTBlMmQxMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21hMWZhNjk3M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21iMTZjMDk3MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21kZjQ2ODE1N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb205MWQzODAxOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb200MWY2ZWRhMUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb20yOTk4MTRjNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMubWV4aWNhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y19jbGFzc3Jvb201N2UzOTczNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb201OWQ1MzgxNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb204YjlkMjZmZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb20yNWIxZWQyMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21jZDRiMzVlOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21mMzVlMGJjZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21kMzY5MWQwN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21lYTc0OGZiZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb203MjhiMWI4ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21mNmMyMzg0MUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=dXRtYS5lZHUubXhfY2xhc3Nyb29tZTJmODJjNGFAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y19jbGFzc3Jvb21iODYxNmRlZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb200NGRiODZhOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21hOTZhZDQ3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb20yYWY5MGY2MUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb20zZmM3OTJiN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb205ZWFjYWI1MkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21kZTBmZTJhYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb200YjhjZWNjM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb205NTM3ZDY1MkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb200ZWRkNzg2ZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%230047a8&color=%23202124&color=%230047a8&color=%230047a8&color=%23202124&color=%230047a8&color=%23202124&color=%23b80672&color=%23c26401&color=%2333B679&color=%23007b83&color=%23137333&color=%230047a8&color=%237627bb&color=%23202124&color=%230047a8&color=%230047a8&color=%230047a8&color=%23202124&color=%23007b83&color=%230047a8&color=%230047a8&color=%230B8043&color=%237627bb&color=%23c26401&color=%237627bb&color=%237627bb&color=%23007b83&color=%23c26401&color=%230047a8&color=%23007b83&color=%23202124&color=%230047a8&color=%230047a8&color=%230047a8&color=%23137333&color=%23137333&color=%23202124&color=%23202124&color=%23202124&color=%23202124&color=%23137333&color=%23c26401&color=%23202124" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </section>
+

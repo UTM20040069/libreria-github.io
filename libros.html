@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="firebaseauth.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="buscador.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Bienvenido a la Biblioteca</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a id="libros" href="libros.html">Libros</a></li>
+                    <li><a href="bot.html">Bots Telegram</a></li>
+                    <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="login.html">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    </div>
+    <section id="libros" class="books">
+        <div class="search-container">
+            <input type="text" class="search-bar" id="buscador" name="buscador" placeholder="Buscar...">
+            <div id="search-results"></div>
+        <h2>Libros Disponibles En Biblioteca</h2>
+        <div class="book-grid">
+            <div class="book-item"><img src="img/1.jfif" alt="Libro 1"><p>IT Capitulo 2</p></div>
+            <div class="book-item"><img src="img/2.jfif" alt="Libro 2"><p>El bosque negro</p></div>
+            <div class="book-item"><img src="img/3.jfif" alt="Libro 3"><p>A teaspoon of earth and sea</p></div>
+            <div class="book-item"><img src="img/4.jfif" alt="Libro 4"><p>El quinto infierno</p></div>
+            <div class="book-item"><img src="img/5.jpg" alt="Libro 5"><p>Animales fantasticos</p></div>
+            <div class="book-item"><img src="img/6.jfif" alt="Libro 6"><p>Delirios</p></div>
+            <div class="book-item"><img src="img/7.jpg" alt="Libro 7"><p>Más alla de las estrellas</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/91R1AixEiLL._SY522_.jpg" alt="Libro 8"><p>Harry Potter Y La Piedra Filosofal</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/41Bgjd5URXL._SY445_SX342_.jpg" alt="Libro 9"><p>Harry Potter Y La Cámara Secreta</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/81-zi6afVQL._SY522_.jpg" alt="Libro 10"><p>Harry Potter Y El Prisionero De Azkaban</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/41X1bYAlCDL._SY445_SX342_.jpg" alt="Libro 11"><p>Harry Potter y el caliz de fuego</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/41B1DjZ87AL._SY445_SX342_.jpg" alt="Libro 12"><p>Harry Potter y la Órden del Fénix</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/91XyNH557TL._SY522_.jpg" alt="Libro 13"><p>Harry Potter y el misterio del príncipe</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/81BBrR+iGRL._SY522_.jpg" alt="Libro 14"><p>Harry Potter y las Reliquias de la Muerte</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/9149GGuBoDL._SY522_.jpg" alt="Libro 15"><p>Harry Potter y el legado maldito</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51u7vOMjO8L._SY445_SX342_.jpg" alt="Libro 16"><p>Tus zonas erróneas</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/71b7g-O8pHL._SY522_.jpg" alt="Libro 17"><p>La teoría sintérgica</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51CRyxfl43L._SY445_SX342_.jpg" alt="Libro 18"><p>La Biblioteca De La Medianoche</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/818SMlbGApL._SY522_.jpg" alt="Libro 19"><p>AL FINAL MUEREN LOS DOS </p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/416PSohrD+L._SY445_SX342_.jpg" alt="Libro 20"><p>Al final muere el primero</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/71fQ6IiTvoL._SY522_.jpg" alt="Libro 21"><p>El mapa de los anhelos</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/71FVZquDJ-L._SY522_.jpg" alt="Libro 22"><p>Tú y otros desastres naturales</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/41jlRYFxQ4L._SY445_SX342_.jpg" alt="Libro 23"><p>Deja De Ser Tú: La mente crea la realidad</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51mop9US7SL._SY522_.jpg" alt="Libro 24"><p>Este dolor no es mío</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/41fuN-j5ooL._SY445_SX342_.jpg" alt="Libro 25"><p>La hipótesis del amor</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/61BkuQJZ-gL._SY522_.jpg" alt="Libro 26"><p>El poder de las palabras</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/916d6cobjqL._SY522_.jpg" alt="Libro 27"><p>La teoría del todo</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51UmxHFF6gL._SY445_SX342_.jpg" alt="Libro 28"><p>Meditaciones</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/516ktkn0sZL._SY445_SX342_.jpg" alt="Libro 29"><p>Las 48 leyes del poder</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/71HBiiphoaL._SY522_.jpg" alt="Libro 30"><p>Si lo crees, lo creas</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51O1BngHJWL._SY445_SX342_.jpg" alt="Libro 31"><p>Un Obsequio para el Alma</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/61By+AvZOVL._SY522_.jpg" alt="Libro 32"><p>El Hombre En Busca de Sentido</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51NATCpiY9L._SY445_SX342_.jpg" alt="Libro 33"><p>Aura</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/91dmupdIdIL._SY522_.jpg" alt="Libro 34"><p>Asesino de brujas 1: La bruja blanca</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51DcYrEv-aL._SY445_SX342_.jpg" alt="Libro 35"><p>Heartless</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/818c9yXopZL._SY522_.jpg" alt="Libro 36"><p>Cumbres Borrascosas</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/6197NHIuvAL._SY522_.jpg" alt="Libro 37"><p>La canción de Aquiles</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/41XiogLTzML._SY445_SX342_.jpg" alt="Libro 38"><p>50 Cápsulas de Amor Propio</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/81th-02KsUL._SY522_.jpg" alt="Libro 39"><p>Los Reyes de la Arena: Cuentos de Terror</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/81FdwnnOv7L._SY522_.jpg" alt="Libro 40"><p>Confesiones desde el exilio: Enrique Peña Nieto </p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/71uEnvSoGTL._SY522_.jpg" alt="Libro 41"><p>La guerra de los chips</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/41xwiPUk6aL._SX342_SY445_.jpg" alt="Libro 42"><p>Ultimate Python</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/41O1ZhedpXL._SY445_SX342_.jpg" alt="Libro 43"><p>Inteligencia artificial</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/81EazVWdjaL._SY522_.jpg" alt="Libro 44"><p>Kaizen: La clave de la ventaja competitiva japonesa</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51rXrmHv51L._SY445_SX342_.jpg" alt="Libro 45"><p>1984</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/41+Xd5CasTL._SY445_SX342_.jpg" alt="Libro 46"><p>Cadáver exquisito</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/61BNPHIQYxL._SY522_.jpg" alt="Libro 47"><p>Asistente del villano</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/41RPSuEDayL._SY445_SX342_.jpg" alt="Libro 48"><p>Backstage</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51Igli+7yYL._SY445_SX342_.jpg" alt="Libro 49"><p>Sinfín</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/71OHrye87nL._SY522_.jpg" alt="Libro 50"><p>Apaga el celular y enciende tu cerebro</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/41Yr01XIIjS._SY445_SX342_.jpg" alt="Libro 51"><p>Ante todo, no hagas daño</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/41XffK6DGZL._SY445_SX342_.jpg" alt="Libro 52"><p>Pero Querías Ser Doctor</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51vs62YJWRL._SY445_SX342_.jpg" alt="Libro 52"><p>Hoyos Negros Y La Curvatura Del Espacio Tiempo</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/4165j0XjHAL._SY445_SX342_.jpg" alt="Libro 53"><p>El color que cayó del espacio </p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/91ICYcysS0L._SY522_.jpg" alt="Libro 54"><p>Mercaderes del espacio</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51YjvEjnoFL._SY445_SX342_.jpg" alt="Libro 55"><p>La guerra de los huracanes</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/61cWg1--lAL._SY522_.jpg" alt="Libro 56"><p>El Extraño caso del Dr. Jekyll y Mr. Hyde</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/41dELQkZ4uL._SY445_SX342_.jpg" alt="Libro 57"><p>La Divina Comedia</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51SvY+YvGpL._SY445_SX342_.jpg" alt="Libro 58"><p>Fuego y Sangre</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/91JbO8m71CL._SY522_.jpg" alt="Libro 59"><p>Carne Muerta: Día 1</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51MXkzkj+-L._SY445_SX342_.jpg" alt="Libro 60"><p>Apprentice to the Villain</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/51Qx2wD2caL._SY445_SX342_.jpg" alt="Libro 61"><p>Choque de reyes (Canción de Hielo y Fuego 2) </p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/81wkgPzbVxL._SY522_.jpg" alt="Libro 62"><p>Fabricante de lágrimas</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/61tXxIFVJuL._SY445_SX342_.jpg" alt="Libro 63"><p>Alas de sangre</p></div>
+            <div class="book-item"><img src="https://m.media-amazon.com/images/I/5169xLz2k1L._SY445_SX342_.jpg" alt="Libro 64"><p>Una corte de rosas y espinas</p></div>
+            <div class="book-item"><img src="https://danielbadosa.com/wp-content/uploads/2020/05/00.-c%C3%B3mo-dise%C3%B1ar-la-portada-de-tu-libro-ejemplo-Portada-El-Abandono-1-1080x1721.jpg" alt="Libro 65"><p>El Abandono</p></div>
+        </div>
+    </section>
+    <section id="nosotros" class="content">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una biblioteca dedicada
